@@ -30,3 +30,38 @@ marks
 plot(marks)
 density(marks)
 plot(density(marks))
+
+# R starts from position 1
+x7[1]
+
+#First 5 values
+x5[1:5]
+
+#1st, 4th, 5th, 10th value
+x4[c(1,4,5,10)]
+
+# All values except the 1st
+x4[-1]
+
+#mean
+mean(x5)
+
+#sum
+x5
+sum(x5)
+
+#median
+median(x5)
+
+#All values more than 20
+x4[x4>50]
+x4[x4>50 & x4<60]
+
+#Logical Vectors
+l1=c(TRUE, FALSE)
+l1
+
+# Find values of a vector in another
+x4[x4 %in% x5]
+x4[!x4 %in% x5]
+
