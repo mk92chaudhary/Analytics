@@ -55,11 +55,13 @@ library(dplyr)
 sales %>% count(custname, sort=TRUE) %>% head(n=5)#pipes
 #Ans: CHIZ BROS INC most loyal with 253 times purchase
 
+?dplyr::summarise
 sales %>% dplyr::group_by(custname) %>% dplyr::summarise(n = n()) %>% dplyr::arrange(desc(n)) %>% head(n=5)
 #Ans: CHIZ BROS INC most loyal with 253 times purchase
 
 
 #Case-2 : Customer- Highest Revenue---
+?summarize
 sales %>% group_by(custname) %>%  summarize(Revenue = sum(revenue)) %>% arrange(desc(Revenue)) %>% head(n=3)
 #Ans2: Triumph Insulation gave max revenue
 
