@@ -92,9 +92,9 @@ sales %>% group_by (partnum) %>% summarise(TotalMargin= sum(margin)) %>% arrange
 
 #Case : Extra ----
 #Find Regions wise sales
-
+salesregionrevenue = sales %>% group_by(region,custname) %>% summarise(Revenue = sum(revenue)) %>% arrange(desc(Revenue))
 salesregionrevenue = sales %>% group_by(region) %>% summarise(Revenue = sum(revenue)) %>% arrange(desc(Revenue))
-
+salesregionrevenue
 #Some Graphs related to Data Summarised
 pie(x = salesregionrevenue$Revenue, labels=unique(sales$region))
 barplot(salesregionrevenue$Revenue, col=1:4)
